@@ -21,7 +21,45 @@
         <div class="col-lg-6">
             <div id="graph3"></div>
         </div>
+
     </div>
+
+<h3>Written Questions</h3>
+
+<h4>Question 1</h4>
+
+<p>I focused on the Netflix dataset. My first barplot sought to answer the question of how many movies were in each genre in the dataset. Much like the lab, I plotted the genres on the y axis, and how many of the movies were in each genre.
+To make the grqaph readable, I only looked at the top 15 genres by count, and displayed the counts to the right of the bars. The most common genre in the dataset was International Movies
+, of which there 1927, followed by 1623 Dramas. Each movie may appear in multiple categories of it was listed in multiple genres in the dataset, so the total over all genres will exceed the total number of movies in the dataset.</p>
+
+<p>For the scatterplot, I showed the average runtime of all movies by realease year. The dataset goes back to 1940, though it is a bit more sporadic then, so the average jumps around. Since 2000, the average runtime has steadily decreased, which can be explored by mousing over an individual dot.  </p>
+
+<p>For the third question, I created a network graph, closely following the
+<a href="https://observablehq.com/@d3/force-directed-graph">Observable HQ example</a>.
+This network includes all actors with at least 10 movies, color and size-coded by how many movies that actor was credited in. Every in-network actor they co-starred with in a movie in the database is represented with an edge, sized by how many movies they co-starred in.
+Mouse over nodes and edges to see how many movies the actor starred in or how many the pair co-starred in. There are a few distinct cultural clusters of movie, generally by style or location (for instance, the Bollywood cluster.)
+</p>
+
+
+<h4>Question 2</h4>
+
+<p>D3 made certain visualization aspects significantly easier. Coloring by quantity was very easy to apply to a display, as it could be applied to all data points in one line. Likewise, the domain/range mapping were very helpful. This abstraction made it easy to not have to thing about multiple coordinate systems, and made making modular, cleaner displays much easier.
+Lastly, the existing support for various types of graphs was very helpful in making the graphs I wanted to. They were very flexible, which made them modular and adjustable to the circumstances I was trying to capture, but made it easier not to worry the weeds of actually creating each component.</p>
+
+<h4>Question 3</h4>
+<p> D3 was a great tool, but not perfect. the JavaScript support for data manipulation was pretty weak, had me often wishing I could use Python's pandas. Many times tasks would have been significantly easier if their was a dataframe-like structure or a groupby function.
+    Similarly, I think that D3 is a good tool for dynamic displays were the underlying data is changing, but I think static datasets are easier to work with in a more data-centric language, such as R or Python. Lastly, I think D3 would not be the right tool if someone wanted to create a very original type of graph.
+While the libraries were pretty modular, there are some designs that make it difficult to do things that don't fit one of the existing graph types.</p>
+
+<h4>Questions 4/5</h4>
+<p> I don't think my dashboard is particularly accessible to the visually-impaired. While the graphs are not very complicated, my DOM tree isn't very understable to tab through, I made use of two hover displays that show data otherwise invisible, and I didn't caption my charts extensively.
+I think I could improve this by providing a sentence-long summary for each chart, and enabling a feature that when selected, would label each datapoint, instead of requiring a mouseover. I think the easiest time to incorporate more accessible features would have been at the start, when I was just planning what my dashboard would look like. Had I a better vision of what I wanted things to look like, I would
+have been able to come up with more support, such as identifying captions that describe what the graph is trying to say, in addition to the underlying data. While this is still possible to add now, it is definitely easier to incorporate in a more user-centric way if done methodically from the start.</p>
+<p> </p>
+<p> </p>
+
+
+<p>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"</p>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
 </body>
